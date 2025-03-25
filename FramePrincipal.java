@@ -14,6 +14,7 @@ class FramePrincipal extends JFrame {
         cardLayout = new CardLayout();
         container = new JPanel(cardLayout);
         add(container);
+
     }
 }
 

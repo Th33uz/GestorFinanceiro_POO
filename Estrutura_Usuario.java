@@ -1,14 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Estrutura_Usuario{
     private int id;
     private String nome;
     private String login;
     private String senha;
+    private List<Estrutura_Transacao> transacoes;
+    private List<Estrutura_Categoria> categorias;
 
     public Estrutura_Usuario(int id, String nome, String login, String senha){
         this.id = id;
         this.nome = nome;
         this.login = login;
         this.senha = senha;
+        this.transacoes = new ArrayList<>();
+        this.categorias = new ArrayList<>();
     }
 
     public int getId(){
@@ -67,4 +74,45 @@ public class Estrutura_Usuario{
         }
     }
 
+    public List<Estrutura_Transacao> getTransacoes(){
+        if(transacoes.isEmpty()){
+            System.out.println("Nenhuma transação registrada.");
+        }
+
+        else{
+            return transacoes;
+        }
+        return new ArrayList<>();
+    }
+
+    public List<Estrutura_Categoria> getCategorias(){
+        if(categorias.isEmpty()){
+            System.out.println("Nenhuma categoria registrada.");
+        }
+
+        else{
+            return categorias;
+        }
+        return new ArrayList<>();
+    }
+
+    public void adicionarTransacao(Estrutura_Transacao transacao){
+        if(transacao == null){
+            System.out.println("Erro: A transação não pode ser nula.");
+        }
+
+        else{
+            this.transacoes.add(transacao);
+        }
+    }
+
+    public void adicionarCategoria(Estrutura_Categoria categoria){
+        if(categoria == null){
+            System.out.println("Erro: A categoria não pode ser nula.");
+        }
+
+        else{
+            this.categorias.add(categoria);
+        }
+    }
 }

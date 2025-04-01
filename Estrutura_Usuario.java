@@ -24,6 +24,7 @@ public class Estrutura_Usuario{
 
     public void setId(int id){
         if(id <= 0){
+            //Para os métodos da classe aonde possuem "print's", não serão exibidos ao usuário pois não estão implementados na classe de Interface
             System.out.println("Erro: O ID deve ser maior que zero.");
         }
 

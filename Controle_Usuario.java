@@ -17,4 +17,26 @@ public class Controle_Usuario{
             usuarios.add(usuario);
         }
     }
+
+    public Estrutura_Usuario validarLogin(String login, String senha){
+        for(Estrutura_Usuario usuario : usuarios){
+            if(usuario.getLogin().equals(login) && usuario.getSenha().equals(senha)){
+                return usuario;
+            }
+        }
+
+        System.out.println("Erro: Login ou senha inválidos.");
+        return null;
+    }
+
+    public List<Estrutura_Usuario> getUsuarios(){
+        if(usuarios.isEmpty()){
+            System.out.println("Nenhum usuário cadastrado.");
+            return new ArrayList<>();
+        }
+
+        else{
+            return usuarios;
+        }
+    }
 }

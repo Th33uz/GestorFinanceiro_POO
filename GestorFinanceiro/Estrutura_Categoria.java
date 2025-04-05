@@ -1,3 +1,5 @@
+package GestorFinanceiro;
+
 import java.time.LocalDate;
 
 public class Estrutura_Categoria {

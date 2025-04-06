@@ -1,4 +1,4 @@
-package GestorFinanceiro;
+package GestorFinanceiro.Estrutura;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,6 @@
-package GestorFinanceiro;
+package GestorFinanceiro.Armazenamento;
+
+import GestorFinanceiro.Estrutura.Estrutura_Usuario;
 
 import java.util.ArrayList;
 import java.util.List;

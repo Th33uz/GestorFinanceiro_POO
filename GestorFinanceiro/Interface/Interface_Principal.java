@@ -1,4 +1,7 @@
-package GestorFinanceiro;
+package GestorFinanceiro.Interface;
+
+import GestorFinanceiro.Controle.Controle_Usuario;
+import GestorFinanceiro.Estrutura.Estrutura_Usuario;
 
 import javax.swing.*;
 

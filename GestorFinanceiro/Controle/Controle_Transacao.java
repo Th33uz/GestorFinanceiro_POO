@@ -1,4 +1,7 @@
-package GestorFinanceiro;
+package GestorFinanceiro.Controle;
+
+import GestorFinanceiro.Estrutura.Estrutura_Usuario;
+import GestorFinanceiro.Estrutura.Estrutura_Transacao;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,10 @@
-package GestorFinanceiro;
+package GestorFinanceiro.Interface;
+
+import GestorFinanceiro.Controle.Controle_Transacao;
+import GestorFinanceiro.Controle.Controle_Usuario;
+import GestorFinanceiro.Estrutura.Estrutura_Categoria;
+import GestorFinanceiro.Estrutura.Estrutura_Transacao;
+import GestorFinanceiro.Estrutura.Estrutura_Usuario;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

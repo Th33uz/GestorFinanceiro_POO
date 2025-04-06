@@ -1,9 +1,8 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
+package GestorFinanceiro.Interface;
 
-package GestorFinanceiro;
+import GestorFinanceiro.Controle.Controle_Usuario;
+import GestorFinanceiro.Estrutura.Estrutura_Categoria;
+import GestorFinanceiro.Estrutura.Estrutura_Usuario;
 
 import java.awt.Component;
 import java.awt.LayoutManager;

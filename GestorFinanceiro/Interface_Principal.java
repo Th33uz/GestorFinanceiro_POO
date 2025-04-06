@@ -42,18 +42,18 @@ public class Interface_Principal extends JFrame{
         add(BotaoVoltar);
 
         BotaoCategorias.addActionListener(e -> {
-            //adicionar o construtor da classe depois para inicializar o frame da proxima tela
-            //não esquecer de colocar o dispose para fechar a tela principal
+            new Interface_Categoria(usuario, controleUsuario);
+            dispose();
         });
 
         BotaoTransacoes.addActionListener(e -> {
-            //adicionar o construtor da classe depois para inicializar o frame da proxima tela
-            //não esquecer de colocar o dispose para fechar a tela principal
+            new Interface_Transacao(usuario, controleUsuario);
+            dispose();
         });
 
         BotaoHistorico.addActionListener(e -> {
-            //adicionar o construtor da classe depois para inicializar o frame da proxima tela
-            //não esquecer de colocar o dispose para fechar a tela principal
+            new Interface_Historico(usuario, controleUsuario);
+            dispose();
         });
 
         BotaoResumo.addActionListener(e -> {
@@ -62,9 +62,8 @@ public class Interface_Principal extends JFrame{
         });
 
         BotaoVoltar.addActionListener(e -> {
-            //adicionar o construtor da classe depois para inicializar o frame da proxima tela
-            //não esquecer de colocar o dispose para fechar a tela principal
-            //o construtor do botão voltar é o da tela de login!!!
+            new Interface_Login(controleUsuario);
+            dispose();
         });
 
         setVisible(true);

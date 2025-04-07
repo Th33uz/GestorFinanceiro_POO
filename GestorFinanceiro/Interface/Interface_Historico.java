@@ -41,6 +41,10 @@ public class Interface_Historico extends JFrame {
         this.add(BotaoVoltar);
 
         this.atualizarTabela();
+        BotaoVoltar.addActionListener(e -> {
+            new Interface_Principal(usuario, controleUsuario);
+            dispose();
+        });
         this.setVisible(true);
     }
 
@@ -57,4 +61,5 @@ public class Interface_Historico extends JFrame {
 
         this.RotuloSaldoTotal.setText("Saldo TOTAL: R$ " + saldoTotal);
     }
+
 }

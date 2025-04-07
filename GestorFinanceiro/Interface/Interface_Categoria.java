@@ -95,7 +95,10 @@ public class Interface_Categoria extends JFrame {
                 this.atualizarTabela();
             }
         });
-
+        BotaoVoltar.addActionListener(e -> {
+            new Interface_Principal(usuario, controleUsuario);
+            dispose();
+        });
         this.setVisible(true);
     }
 

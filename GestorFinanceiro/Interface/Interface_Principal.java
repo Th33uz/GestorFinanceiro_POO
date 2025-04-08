@@ -60,8 +60,8 @@ public class Interface_Principal extends JFrame{
         });
 
         BotaoResumo.addActionListener(e -> {
-            //adicionar o construtor da classe depois para inicializar o frame da proxima tela
-            //não esquecer de colocar o dispose para fechar a tela principal
+            new Interface_Resumo(usuario, controleUsuario);
+            dispose();
         });
 
         BotaoVoltar.addActionListener(e -> {

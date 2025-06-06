@@ -9,6 +9,7 @@ Gabriel Barbosa dos Santos(841923)
 David Camara(841925)
 
 Visão Geral
+
 O Projeto Finanças é uma aplicação desktop desenvolvida em Java, utilizando a biblioteca
 Swing para a construção da interface gráfica e o SQLite como sistema de banco de dados. Seu
 objetivo é oferecer uma solução simples e funcional para o gerenciamento de finanças
@@ -16,22 +17,30 @@ pessoais, permitindo o controle de usuários, categorias de despesas e receitas,
 registro de transações financeiras.
 
 Arquitetura do Sistema
+
 A aplicação está estruturada em camadas bem definidas, promovendo organização,
 reutilização de código e separação de responsabilidades. As principais camadas são:
 
 Estrutura (Modelos de Dados)
+
 Controle (Lógica de Negócio)
+
 DAO (Acesso a Dados)
+
 Interface (Swing)
+
 Armazenamento (Conexão com o Banco de Dados)
 
 1. Estrutura (Modelos de Dados)
+   
 Esta camada contém as classes puras que representam as entidades do sistema. Essas classes
 possuem apenas atributos privados, com seus respectivos getters e setters, mantendo o
 modelo de dados desacoplado da lógica de negócio.
 
 Estrutura_Usuario
+
 Atributos:
+
 • int ID_Usuario
 • String Nome
 • String Login
@@ -42,18 +51,24 @@ Responsabilidades:
 • Não contém lógica de validação ou regras de negócio.
 
 Estrutura_Categoria
+
 Atributos:
+
 • int ID_Categoria
 • String Nome_Categoria
 • double Valor_Total_Despesa
 • double Valor_Total_Receita
 • String Data_Criacao_Categoria
 • int ID_Usuario
+
 Responsabilidades:
+
 • Representar as categorias associadas a cada usuário.
 
 Estrutura_Transacao
+
 Atributos:
+
 • int ID_Transacao
 • String Descricao
 • double Valor
@@ -61,15 +76,20 @@ Atributos:
 • String Tipo (valores: 'Receita' ou 'Despeza')
 • int ID_Usuario
 • int ID_Categoria
+
 Responsabilidades:
+
 • Representar as transações financeiras dos usuários.
 
 2. Controle (Lógica de Negócio)
+   
 As classes de controle contêm regras de negócio, validações e a intermediação entre a
 interface do usuário e o banco de dados (DAO).
 
 Controle_Usuario
+
 Métodos Principais:
+
 • autenticarUsuario(String login, String senha): valida credenciais.
 • verificarExistenciaUsuario(String login): verifica se o login já está em uso.
 • cadastrarUsuario(Estrutura_Usuario usuario): registra um novo usuário.
@@ -77,14 +97,18 @@ Métodos Principais:
 usuário com base no tipo da transação.
 
 Controle_Categoria
+
 Métodos Principais:
+
 • listarCategoriasPorUsuario(int idUsuario): retorna categorias do usuário.
 • alterarCategoria(Estrutura_Categoria categoria): edita categoria.
 • excluirCategoria(int idCategoria): remove categoria (respeitando restrições).
 • atualizarTotaisCategoria(int idCategoria): recalcula totais de receita e despesa.
 
 Controle_Transacao
+
 Métodos Principais:
+
 • listarTransacoesPorUsuario(int idUsuario): retorna todas as transações do usuário.
 • inserirTransacao(Estrutura_Transacao transacao): adiciona nova transação.
 • alterarTransacao(Estrutura_Transacao transacao): modifica uma transação.

@@ -1,7 +1,11 @@
 Projeto Gestor de Finanças
+
 Realizado para disciplina de Laboratorio de Programação Orientada a Objetos ministrada professor Bruno 
+
 Matheus Abilio da Silva Camargo(841929)
+
 Gabriel Barbosa dos Santos(841923)
+
 David Camara(841925)
 
 Visão Geral

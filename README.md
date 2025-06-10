@@ -42,12 +42,19 @@ Estrutura_Usuario
 Atributos:
 
 • int ID_Usuario
+
 • String Nome
+
 • String Login
+
 • String Senha
+
 • double Historico_Valor_Total
+
 Responsabilidades:
+
 • Armazenar dados do usuário.
+
 • Não contém lógica de validação ou regras de negócio.
 
 Estrutura_Categoria
@@ -55,10 +62,15 @@ Estrutura_Categoria
 Atributos:
 
 • int ID_Categoria
+
 • String Nome_Categoria
+
 • double Valor_Total_Despesa
+
 • double Valor_Total_Receita
+
 • String Data_Criacao_Categoria
+
 • int ID_Usuario
 
 Responsabilidades:
@@ -70,11 +82,17 @@ Estrutura_Transacao
 Atributos:
 
 • int ID_Transacao
+
 • String Descricao
+
 • double Valor
+
 • String Data
+
 • String Tipo (valores: 'Receita' ou 'Despeza')
+
 • int ID_Usuario
+
 • int ID_Categoria
 
 Responsabilidades:
@@ -91,8 +109,11 @@ Controle_Usuario
 Métodos Principais:
 
 • autenticarUsuario(String login, String senha): valida credenciais.
+
 • verificarExistenciaUsuario(String login): verifica se o login já está em uso.
+
 • cadastrarUsuario(Estrutura_Usuario usuario): registra um novo usuário.
+
 • atualizarHistorico(int idUsuario, String tipo, double valor): atualiza o histórico total do
 usuário com base no tipo da transação.
 
@@ -101,8 +122,11 @@ Controle_Categoria
 Métodos Principais:
 
 • listarCategoriasPorUsuario(int idUsuario): retorna categorias do usuário.
+
 • alterarCategoria(Estrutura_Categoria categoria): edita categoria.
+
 • excluirCategoria(int idCategoria): remove categoria (respeitando restrições).
+
 • atualizarTotaisCategoria(int idCategoria): recalcula totais de receita e despesa.
 
 Controle_Transacao
@@ -110,9 +134,13 @@ Controle_Transacao
 Métodos Principais:
 
 • listarTransacoesPorUsuario(int idUsuario): retorna todas as transações do usuário.
+
 • inserirTransacao(Estrutura_Transacao transacao): adiciona nova transação.
+
 • alterarTransacao(Estrutura_Transacao transacao): modifica uma transação.
+
 • excluirTransacao(int idTransacao): remove transação existente.
+
 • atualizarValoresRelacionados(int idUsuario): atualiza totais em categorias e histórico
 do usuário.
 
